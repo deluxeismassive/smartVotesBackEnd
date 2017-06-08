@@ -1,5 +1,6 @@
 var axios = require('axios');
 var express = require('express')
+var knex = require('../db/knex')
 var router = express.Router()
 
 router.get('/house/:id', function(req, res) {
