@@ -6,6 +6,9 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var people = require('./routes/people');
+var votes = require('./routes/votes');
+var bills = require('./routes/bills');
+
 var cors = require('cors');
 
 var app = express();
@@ -22,6 +25,10 @@ app.use(cors());
 // app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/people', people);
+app.use('/votes', votes);
+app.use('/bills', bills);
+
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
