@@ -4,6 +4,7 @@ exports.up = function(knex, Promise) {
    table.integer('user_id')
    table.integer('bill_id')
    table.bool('yes_no')
+   table.text('bill_uri')
  })
 };
 

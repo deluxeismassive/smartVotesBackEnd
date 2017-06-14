@@ -16,6 +16,19 @@ router.get('/:id', function(req, res) {
 
 })
 
+router.get('/single/:id', function(req, res) {
+
+  axios.get('https://api.propublica.org/congress/v1/members/'+req.params.id+'/votes.json', {
+    headers: {'X-API-Key': '7qRl1TJZeM1Mm1VxZzOHG7A3qaa6517W3Nc0cpxg'}
+  })
+  .then(function(response) {
+    res.json(response.data);
+  })
+  .catch(function(error) {
+  })
+
+})
+
 router.put('/', function(req, res){
 
   knex('bills_users')
