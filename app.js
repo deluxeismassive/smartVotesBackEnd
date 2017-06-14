@@ -8,6 +8,8 @@ var bodyParser = require('body-parser');
 var people = require('./routes/people');
 var votes = require('./routes/votes');
 var bills = require('./routes/bills');
+var users = require('./routes/users');
+
 
 var cors = require('cors');
 
@@ -27,6 +29,8 @@ app.use(cors());
 app.use('/people', people);
 app.use('/votes', votes);
 app.use('/bills', bills);
+app.use('/users', users);
+
 
 
 
