@@ -10,7 +10,6 @@ router.get('/:id', function(req, res) {
     .where({'email': req.params.id
   }).select('*')
   .then(votes => {
-    console.log(votes);
     res.json(votes)
   })
 

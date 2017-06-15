@@ -27,13 +27,13 @@ router.get('/api', function(req, res) {
       })
       knex.insert(insertBills).into('bills')
       .then(id => {
-        console.log(id);
+        res.send(200)
       })
       res.json(response.data)
     })
   })
   .catch(function(error) {
-    console.log('route failed');
+    res.send(500)
   })
 })
 

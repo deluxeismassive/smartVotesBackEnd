@@ -30,7 +30,6 @@ router.get('/single/:id', function(req, res) {
     headers: {'X-API-Key': '7qRl1TJZeM1Mm1VxZzOHG7A3qaa6517W3Nc0cpxg'}
   })
   .then(function(response) {
-    console.log(response.data);
     res.json(response.data);
   })
   .catch(function(error) {
@@ -43,7 +42,7 @@ router.get('/donors/:id', function(req, res) {
     res.json(response.data);
   })
   .catch(function(error) {
-    console.log(error);
+    (error);
   })
 })
 
@@ -53,7 +52,7 @@ router.get('/sector/:id', function(req, res) {
     res.json(response.data);
   })
   .catch(function(error) {
-    console.log(error);
+    res.send(error)
   })
 })
 
